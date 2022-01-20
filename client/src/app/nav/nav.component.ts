@@ -28,9 +28,6 @@ export class NavComponent implements OnInit {
       this.accountService.currentUser$.subscribe(value => this.user=value);
       console.log("user  ",this.user.username);
       
-    }, error => {
-      console.log(error);
-      this.toastr.error(error.error);
     })
   }
 
