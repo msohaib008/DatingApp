@@ -35,5 +35,13 @@ namespace API.Controllers
             })
             .ToArray();
         }
+
+        [HttpGet("{user}")]
+        public string[] Get(string user)
+        {
+            var rng = new Random();
+            string[] random = new[]{rng.ToString(), user};
+           return random;
+        }
     }
 }
