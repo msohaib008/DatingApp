@@ -20,6 +20,7 @@ export class AccountService {
       map((response: User)=>{
         const user = response;
         if(user){
+          // debugger;
           this.setCurrentUser(user);
         }
       })
@@ -39,6 +40,7 @@ export class AccountService {
   setCurrentUser(user: User){
     localStorage.setItem('user',JSON.stringify(user));
     this.currentUserSource.next(user);
+    debugger;
   }
 
   logout(){
